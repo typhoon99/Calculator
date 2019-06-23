@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <!-- <script src="jquery.js"></script> -->
+  <script src="app.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="calc-body">
+      <div class="calc-screen">
+        <div class="calc-operation" id="input"></div>
+        <!-- <input type="text" id="output" class="calc-typed" value="0"> -->
+        <div id="output" class="calc-typed">0</div>
+        <!-- <span class="blink-me">_</span> -->
+      <!-- </input> -->
+      </div>
+      <div class="calc-button-row">
+        <button class="button c" onclick="clearString()">C</button>
+        <button class="button l bkspc"  onclick="backspace()"><img src="dark_bkspc.png" class="backspace" height=26px></button>
+        <button class="button l" onclick="updateString('%')">%</button>
+        <button class="button l" onclick="updateString('/')">/</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="updateString('7')">7</button>
+        <button class="button" onclick="updateString('8')">8</button>
+        <button class="button" onclick="updateString('9')">9</button>
+        <button class="button l" onclick="updateString('X')">x</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="updateString('4')">4</button>
+        <button class="button" onclick="updateString('5')">5</button>
+        <button class="button" onclick="updateString('6')">6</button>
+        <button class="button l" onclick="updateString('-')">−</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="button" onclick="updateString('1')">1</button>
+        <button class="button" onclick="updateString('2')">2</button>
+        <button class="button" onclick="updateString('3')">3</button>
+        <button class="button l" onclick="updateString('+')">+</button>
+      </div>
+      <div class="calc-button-row" style="border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;">
+        <a href="../Session Sunday/index.html" target="_blank" class="button i" style="border-bottom-left-radius: 25px;"><img class="info" src="info_color.png" height=27px></img></a>
+        <button class="button" onclick="updateString('0')">0</button>
+
+        <button class="button" onclick="updateString('.')">.</button> 
+        <button class="button l" style="border-bottom-right-radius: 25px;" onclick="equal()">=</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
